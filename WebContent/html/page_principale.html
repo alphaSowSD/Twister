@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/page_principale.css"/>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+        <meta charset="UTF-8"/>
+    </head/>
+
+     <script> 
+        $(function(){
+          $("#header").load("html/header.html"); 
+          $("#footer").load("html/footer.html"); 
+        });
+    </script>
+    <script type="text/javascript">
+       $("#val_abonne").html(env.nb_abonne);
+       $(listFollower);
+       $(recommandation);
+       $(completeMessage);
+    </script>
+
+    <body> 
+        <header id="header">
+        </header>
+        <div>
+            <div id="cote_gauche" class="corp" >
+                <div id="photo">
+                    <img  onClick="javascript:profil_user()" src="img/profil.png" alt="Votre photo de profil"/>
+                </div>
+
+                <div id="info_profil">
+                    
+                    <div id="link_profil">
+                        <h2 class="titre_info_profil"> Messages </h2>
+                        <span id="nb_msg"> null</span>
+                    </div>
+
+                     <div id="nb_abonnement"> 
+                    </div>
+
+                    <div id="nb_abonne">
+                        <h2 class="titre_info_profil"> Abonnées</h2>
+                        <span id="val_abonne"> null </span>
+                    </div> 
+                </div> 
+            </div>
+
+            <div id="milieu" class="corp">
+                <section >
+                    <form id="new_message" method="GET" action="javascript:(function(){return;})()" onSubmit="javascript:nouveauMessage(this)">
+                        <textarea name="new_message" form="new_message" placeholder="Quoi de neuf?"></textarea>
+                        <input id="publier" type="submit" value="Publier"/> 
+                    </form >
+                </section>
+                <section id="messages">
+                </section>
+            </div>
+
+            <div id="cote_droit" class="corp">
+                <div>
+                    <h2>Suggestion</h2>
+                </div>
+                <div id="membres">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

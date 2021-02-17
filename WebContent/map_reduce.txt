@@ -1,0 +1,68 @@
+TD Map Reduce
+
+1. Rappels de cours
+
+Question 1:
+
+Map-Reduce :
+
+	Modèle de programmation
+	Parallélisation automatique
+	Optimisation disque
+	Tolérance au pannes
+
+	Un procédé en 2 étapes :
+
+		1) - Procédé de mapping 
+		2) - Procédé de réunion de l'information (reduce)
+
+		Exemple :
+				Jean fait son tp de techno web de 3I017
+				map(Jean, 1) (tp, 1) (web, 1)
+					(fait, 1) (de, 1) (de ,1)
+					(son, 1) (techno, 1) (3I017, 1)
+
+				Reduce pour chaque clé fait une opération, ici la somme
+
+				... (de, 2)
+
+
+Question 2:
+
+--> Crawl (ex : trouver du documents)
+--> Indexation (formater les documents pour pouvoir offrir une recherche efficace)
+--> Recherche (en retournant les documents les plus pertinent)
+
+
+Question 3:
+
+RSU --> Donner un score d'un mot pour un document
+RSU(w, d) = tf(w,d) x log (nombre_de_documents/df(w))
+
+w = le mot
+d = le document
+
+tf(w,d) = la frequence d'un mot dans un document
+
+df(w) = le nombre de documents ou apparait le mot w
+
+tf =  valeur haute polus le mot apparait souvent dans un document
+--> Oui mais les articles ("le", "la", "les") apparaissent très souvent
+
+SOLUTION : pondérer par le nombre de document
+
+Mesurer une similarité entre 2 documents di, dj :
+
+<Vi, Vj>
+
+On veut construire pour chaque document 
+--> le "term frenquency" (tf) pour chaque mot w appartenant à d
+--> Pour tous les mots le df (document frequency)
+
+Exercice :
+
+Question 1 :
+
+(Definir les fonction map et reduce)
+
+voir "index.js"

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <link rel="stylesheet" type="text/css" href="css/connexion.css"></link>
+        <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"></link>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></link>
+        <meta charset="UTF-8"></meta>
+    </head>
+
+    <script> 
+        $(function(){
+          $("#header").load("html/header.html"); 
+          $("#footer").load("html/footer.html");  
+        });
+    </script>
+    
+    <body>
+        <header id="header">
+        </header>
+        <section>
+            <div id="div_connexion">
+                <h1> Connexion </h1>    
+                <form method="POST" action="javascript:(function(){return;})()" onSubmit="javascript:connection(this)">
+                    <div class="ids">
+                        <label for="pseudo"> Pseudo </label>
+                        <input type="text" name="login" id="login" />
+                    </div>
+                    <div class ="ids">
+                        <label for= "mdp"> Mot de passe </label>
+                        <input type="password" name="mdp" id="mdp" />
+                    </div>
+                    <div class ="boutons">
+                        <input type="submit" name="connexion" id="connexion" value="Se connecter"/>
+                    </div>
+                    <div class="links">
+                        <div id="link1" onClick="javascript:demanderMail()"> Mot de passe oublié ? </div>
+                        <div id="link2" onClick="javascript:makeEnregistrementPanel()"> Pas encore inscrit ? </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    <footer id="footer">
+    </footer>
+    </body>
+</html>
